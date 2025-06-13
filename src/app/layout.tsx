@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 import { Lora, Nunito_Sans } from "next/font/google";
 
 const lora = Lora({
@@ -26,10 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${lora.variable} ${nunito.variable} font-nunito`}>
-        {children}
-      </body>
+    <html lang="en" className={`${lora.variable} ${nunito.variable}`}>
+      <body className="font-nunito antialiased">{children}</body>
     </html>
   );
 }
