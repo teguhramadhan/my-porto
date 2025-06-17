@@ -5,6 +5,7 @@ import { AiFillCodeSandboxCircle } from "react-icons/ai";
 import { IoPersonCircle } from "react-icons/io5";
 import { BiSolidMessageSquareDots } from "react-icons/bi";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -25,9 +26,9 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-center gap-12 w-4/5 text-primary">
           <RiHomeFill className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
-          <a href="/projects">
+          <Link href="/projects">
             <AiFillCodeSandboxCircle className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
-          </a>
+          </Link>
           <IoPersonCircle className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
           <BiSolidMessageSquareDots className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
         </div>
