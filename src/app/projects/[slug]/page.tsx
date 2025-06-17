@@ -10,7 +10,7 @@ interface ProjectPageProps {
   }>;
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return projectData.map((project) => ({
     slug: project.slug,
   }));
