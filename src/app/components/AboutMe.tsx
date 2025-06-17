@@ -93,13 +93,15 @@ export default function AboutMe() {
               <IoCheckmarkCircleSharp className="w-[24px] h-[24px] text-emerald-400" />
               Open to Work
             </p>
-            <p className="text-2xl text-justify text-primary mt-6 leading-loose">
+            <p className="text-xl text-start text-primary mt-6 leading-loose">
               I'm a <span className="font-bold">UI/UX Designer</span> and
               <span className="font-bold">Frontend Developer</span> with around
-              2 years of experience in crafting digital interfaces. I specialize
-              in creating visually appealing designs that are both user-friendly
-              and intuitive, combining a clean aesthetic with thoughtful
-              interaction patterns.
+              2 years of experience in crafting digital interfaces.{" "}
+              <span className="italic">
+                I specialize in creating visually appealing designs
+              </span>{" "}
+              that are both user-friendly and intuitive, combining a clean
+              aesthetic with thoughtful interaction patterns.
             </p>
           </motion.div>
 

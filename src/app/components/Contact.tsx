@@ -17,8 +17,8 @@ export default function ContactSection() {
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="w-full aspect-[4/3] relative overflow-hidden rounded-lg">
               <Image
-                src="/images/recentprojects/gamehub.png"
-                alt="Gamehub Design"
+                src="/images/Tranhumans.png"
+                alt="Contact Illustration"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />

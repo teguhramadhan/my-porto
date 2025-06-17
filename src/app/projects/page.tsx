@@ -107,10 +107,10 @@ export default function Projects() {
 
               {/* Overlay saat hover */}
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 z-30 flex flex-col justify-center items-start text-center px-24">
-                <h3 className="text-4xl font-bold text-primary mb-2">
+                <h3 className="text-4xl font-bold text-start text-primary mb-2">
                   {project.title}
                 </h3>
-                <p className="text-sm text-zinc-200 mb-4">
+                <p className="text-sm text-start text-zinc-200 mb-4">
                   {project.description}
                 </p>
                 <Link

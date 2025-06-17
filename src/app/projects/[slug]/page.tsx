@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="min-h-screen py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+    <div className="min-h-screen py-10">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 py-6 px-4">
         <Link
           href="/projects"
