@@ -2,15 +2,16 @@ import Link from "next/link";
 import projectData from "@/app/data/projectsData";
 import DetailDesign from "@/app/components/DetailDesign";
 import DetailCode from "@/app/components/DetailCode";
-
 import { HiArrowLongLeft } from "react-icons/hi2";
 
+// ✅ Wajib ada di App Router jika dynamic route
 export function generateStaticParams() {
   return projectData.map((project) => ({
     slug: project.slug,
   }));
 }
 
+// ✅ Hindari typing yang aneh
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projectData.find(
     (p) => p.slug.toLowerCase().trim() === params.slug.toLowerCase().trim()
@@ -24,7 +25,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     );
 
   return (
-    <div className="min-h-screen py-10s">
+    <div className="min-h-screen py-10">
       <div className="flex justify-between items-center py-12 px-[120px]">
         <Link
           href="/projects"
