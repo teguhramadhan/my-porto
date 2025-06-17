@@ -1,11 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     domains: ["images.unsplash.com"],
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // ✅ ini WAJIB supaya build tidak gagal karena lint
   },
 };
 
