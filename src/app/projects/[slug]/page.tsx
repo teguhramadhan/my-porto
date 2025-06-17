@@ -5,6 +5,12 @@ import DetailCode from "@/app/components/DetailCode";
 
 import { HiArrowLongLeft } from "react-icons/hi2";
 
+export function generateStaticParams() {
+  return projectData.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projectData.find(
     (p) => p.slug.toLowerCase().trim() === params.slug.toLowerCase().trim()
@@ -20,16 +26,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   return (
     <div className="min-h-screen py-10s">
       <div className="flex justify-between items-center py-12 px-[120px]">
-        <a
+        <Link
           href="/projects"
           className="group flex items-center text-white gap-4 cursor-pointer hover:text-primary transition"
         >
           <HiArrowLongLeft className="w-12 h-12 transform transition-transform duration-300 group-hover:-translate-x-2" />
           <span className="text-lg">Back to Home</span>
-        </a>
+        </Link>
 
         <div className="flex justify-center items-center">
-          {/* Breadcrumb */}
           <nav className="text-sm text-zinc-400">
             <ul className="flex justify-center items-center gap-2 flex-wrap text-lg">
               <li>
@@ -55,7 +60,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      {/* Render Detail Component */}
       {project.category === "design" ? (
         <DetailDesign project={project} />
       ) : (
