@@ -25,47 +25,40 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex justify-center items-center text-center text-red-500 font-semibold text-xl">
+      <div className="min-h-screen flex justify-center items-center text-center text-red-500 font-semibold text-2xl">
         Project not found.
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen py-10">
-      <div className="flex justify-between items-center py-12 px-[120px]">
+    <div className="min-h-screen py-10 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 py-6 px-4">
         <Link
           href="/projects"
-          className="group flex items-center text-white gap-4 cursor-pointer hover:text-primary transition"
+          className="group flex items-center text-white gap-3 hover:text-primary transition"
         >
-          <HiArrowLongLeft className="w-12 h-12 transform transition-transform duration-300 group-hover:-translate-x-2" />
-          <span className="text-lg">Back to Home</span>
+          <HiArrowLongLeft className="w-6 h-6 md:w-10 md:h-10 transform transition-transform duration-300 group-hover:-translate-x-2" />
+          <span className="text-base md:text-lg">Back to Home</span>
         </Link>
 
-        <div className="flex justify-center items-center">
-          <nav className="text-sm text-zinc-400">
-            <ul className="flex justify-center items-center gap-2 flex-wrap text-lg">
-              <li>
-                <Link href="/" className="hover:text-primary transition">
-                  Home
-                </Link>
-              </li>
-              <li>/</li>
-              <li>
-                <Link
-                  href="/projects"
-                  className="hover:text-primary transition"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>/</li>
-              <li className="text-emerald-400 font-semibold">
-                {project.title}
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav className="text-sm text-zinc-400">
+          <ul className="flex flex-wrap gap-2 text-sm md:text-lg">
+            <li>
+              <Link href="/" className="hover:text-primary transition">
+                Home
+              </Link>
+            </li>
+            <li>/</li>
+            <li>
+              <Link href="/projects" className="hover:text-primary transition">
+                Projects
+              </Link>
+            </li>
+            <li>/</li>
+            <li className="text-emerald-400 font-semibold">{project.title}</li>
+          </ul>
+        </nav>
       </div>
 
       {project.category === "design" ? (

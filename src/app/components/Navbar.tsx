@@ -25,12 +25,18 @@ export default function Navbar() {
         viewport={{ once: false }}
       >
         <div className="flex items-center justify-center gap-12 w-4/5 text-primary">
-          <RiHomeFill className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
+          <Link href="/">
+            <RiHomeFill className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
+          </Link>
           <Link href="/projects">
             <AiFillCodeSandboxCircle className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
           </Link>
-          <IoPersonCircle className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
-          <BiSolidMessageSquareDots className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
+          <Link href="/about">
+            <IoPersonCircle className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
+          </Link>
+          <Link href="/contact">
+            <BiSolidMessageSquareDots className="w-[32px] h-[32px] hover:text-white hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" />
+          </Link>
         </div>
       </motion.div>
     </motion.nav>
