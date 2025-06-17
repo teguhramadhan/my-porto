@@ -106,16 +106,16 @@ export default function Projects() {
               </span>
 
               {/* Overlay saat hover */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 z-30 flex flex-col justify-center items-start text-center px-24">
-                <h3 className="text-4xl font-bold text-start text-primary mb-2">
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 z-30 flex flex-col justify-end items-start text-left px-6 sm:px-10 md:px-16 lg:px-24 pb-6 sm:pb-10 md:pb-12 lg:pb-16">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-primary mb-2 md:mb-3">
                   {project.title}
                 </h3>
-                <p className="text-sm text-start text-zinc-200 mb-4">
+                <p className="text-xs sm:text-sm md:text-base lg:text-xl text-zinc-200 mb-3 md:mb-4">
                   {project.description}
                 </p>
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="inline-flex items-center gap-2 text-white text-base font-semibold uppercase underline underline-offset-4 hover:text-emerald-400 transition"
+                  className="inline-flex items-center gap-2 text-white text-sm md:text-base font-semibold uppercase underline underline-offset-4 hover:text-emerald-400 transition"
                 >
                   View Project
                   <CgArrowLongRight className="transition-transform duration-300 group-hover:translate-x-2" />
