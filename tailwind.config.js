@@ -8,9 +8,23 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#E4D7C4",
+        darkbg: "#1a1a1a",
+        bgcard: "#292929",
+      },
       fontFamily: {
-        lora: ["var(--font-lora)", "serif"],
-        nunito: ["var(--font-nunito)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
+        firacode: ["var(--font-fira)", "monospace"],
+      },
+      keyframes: {
+        shine: {
+          "0%": { "background-position": "100%" },
+          "100%": { "background-position": "-100%" },
+        },
+      },
+      animation: {
+        shine: "shine 5s linear infinite",
       },
     },
   },

@@ -1,8 +1,22 @@
+"use client";
+import React from "react";
+
+import Navbar from "./components/Navbar";
+import Hero2 from "./components/Hero2";
+import RecenProjects from "./components/RecentProjects";
+import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-900 text-zinc-200 flex items-center justify-center flex-col">
-      <h1 className="text-5xl font-lora mb-4">Font Lora Aktif</h1>
-      <p className="text-lg font-nunito">Ini pakai Nunito Sans</p>
+    <main>
+      <Navbar />
+      <Hero2 />
+      <RecenProjects />
+      <AboutMe />
+      <Contact />
+      <Footer />
     </main>
   );
 }
