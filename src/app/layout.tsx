@@ -17,7 +17,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Teguh | UI UX & Frontend Developer",
+  title: "Teguh Ramadhan | UI UX & Frontend Developer",
   description: "Website Teguh's Portfolio",
 };
 
